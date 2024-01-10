@@ -3,9 +3,26 @@ let userInputString = prompt (
 'vanilla,strawberry,chocolate,chocolate,strawberry,caramel,cheesecake,cheesecake'
 );
 
-// turns into an array of strings separated by commas.
-const flavors = userInputString.split(",");
+// Split a string into substrings using the specified separator and return them as an array.
+let flavors = userInputString.split(",");
+
+let = flavorsCount = {};
+
+
+// console.table(flavors);
 
 
 
-console.table(flavors);
+
+function getCount(flavors) {
+    for (let i = 0; i < flavors.length; i++) {
+    let flavor = flavors[i];
+    if (flavorsCount[flavor] === undefined) {
+        flavorsCount[flavor] = 1;
+    } else {
+        flavorsCount[flavor]++;
+    }
+  }
+  console.table(flavorsCount);
+}
+getCount(flavors);
